@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense and Income Tracker - Transactions</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body id="transactions-page">
+    <div class="container">
+        <h2 id="sheet-name"></h2>
+        <div>
+            <h3>Add New Transaction</h3>
+            <form id="transaction-form">
+                <input type="text" id="transaction-name" placeholder="Transaction Name">
+                <input type="number" id="transaction-amount" placeholder="Amount">
+                <select id="transaction-type">
+                    <option value="" disabled selected>Select Type (Income/Expense)</option>
+                    <option value="income">Income</option>
+                    <option value="expense">Expense</option>
+                </select>
+                <button type="submit">Add Transaction</button>
+            </form>
+        </div>
+
+        <div>
+            <h3>Previous Transactions</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Amount</th>
+                        <th>Type</th>
+                        <th>Date</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="transaction-table-body"></tbody>
+            </table>
+            <div id="total-amount"></div>
+        </div>
+        <button onclick="location.href='sheets.html'">Back to Sheets</button>
+        <button onclick="location.href='index.html'">Back to Home Page</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
